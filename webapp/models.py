@@ -23,3 +23,4 @@ class GuestBook(models.Model):
         db_table = 'guest_book'
         verbose_name = 'Запись в гостевой книге'
         verbose_name_plural = 'Записи в гостевой книге'
+        ordering = ['-date_added']
