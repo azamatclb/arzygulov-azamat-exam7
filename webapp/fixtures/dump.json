@@ -1,0 +1,74 @@
+[
+  {
+    "model": "webapp.guestbook",
+    "pk": 11,
+    "fields": {
+      "author": "Jogn doe",
+      "email": "johndoe@gmail.com",
+      "text": "johndoejohndoejohndoejohndoejohndoejohndoejohndoejohndoe",
+      "date_added": "2024-07-06T12:20:46.065Z",
+      "date_updated": "2024-07-06T12:20:46.065Z",
+      "status": "active"
+    }
+  },
+  {
+    "model": "webapp.guestbook",
+    "pk": 12,
+    "fields": {
+      "author": "azamat",
+      "email": "azamat@gmail.com",
+      "text": "qwertyqwertyqwerty",
+      "date_added": "2024-07-06T12:22:03.760Z",
+      "date_updated": "2024-07-06T12:22:03.760Z",
+      "status": "active"
+    }
+  },
+  {
+    "model": "webapp.guestbook",
+    "pk": 13,
+    "fields": {
+      "author": "Ben Affleck",
+      "email": "ben@gmail.com",
+      "text": "qwertyqwertyqwertyqwerty",
+      "date_added": "2024-07-06T12:22:15.539Z",
+      "date_updated": "2024-07-06T12:22:15.539Z",
+      "status": "active"
+    }
+  },
+  {
+    "model": "webapp.guestbook",
+    "pk": 14,
+    "fields": {
+      "author": "John wick",
+      "email": "jognwick@gmail.com",
+      "text": "jognwick@gmail.comjognwick@gmail.comjognwick@gmail.com",
+      "date_added": "2024-07-06T12:22:41.072Z",
+      "date_updated": "2024-07-06T12:27:35.039Z",
+      "status": "active"
+    }
+  },
+  {
+    "model": "webapp.guestbook",
+    "pk": 15,
+    "fields": {
+      "author": "Vasilii Pupkin",
+      "email": "vasya@gmail.com",
+      "text": "vasya vasya vasya vasya vasya vasya ",
+      "date_added": "2024-07-06T12:23:36.760Z",
+      "date_updated": "2024-07-06T12:23:36.760Z",
+      "status": "blocked"
+    }
+  },
+  {
+    "model": "webapp.guestbook",
+    "pk": 16,
+    "fields": {
+      "author": "Urmat",
+      "email": "urmat@gmail.com",
+      "text": "urmat urmat urmat urmat urmat urmat urmat urmat ",
+      "date_added": "2024-07-06T12:33:17.283Z",
+      "date_updated": "2024-07-06T12:33:17.283Z",
+      "status": "active"
+    }
+  }
+]
