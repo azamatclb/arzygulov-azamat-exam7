@@ -1,0 +1,38 @@
+{% block content %}
+<div class="container mt-5">
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-floating mb-3">
+            <input value="{{ entry.author }}" name="author" class="form-control" id="floatingInputAuthor" placeholder="Author" required>
+            <label for="floatingInputAuthor">Author</label>
+            {% if errors.author %}
+                <div class="text-danger">{{ errors.author }}</div>
+            {% endif %}
+        </div>
+        <div class="form-floating mb-3">
+            <input value="{{ entry.email }}" type="email" name="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com" required>
+            <label for="floatingInputEmail">Email address</label>
+            {% if errors.email %}
+                <div class="text-danger">{{ errors.email }}</div>
+            {% endif %}
+        </div>
+        <div class="form-floating mb-3">
+            <textarea name="text" class="form-control" id="floatingInputText" placeholder="Text" required>{{ entry.text }}</textarea>
+            <label for="floatingInputText">Text</label>
+            {% if errors.text %}
+                <div class="text-danger">{{ errors.text }}</div>
+            {% endif %}
+        </div>
+        <div class="form-floating mb-3">
+            <select name="status" id="status" class="form-control" required>
+                {% for choice in status_choices %}
+                    <option value="{{ choice.0 }}" {% if entry.status == choice.0 %}selected{% endif %}>{{ choice.1 }}</option>
+                {% endfor %}
+            </select>
+            <label for="status">Status</label>
+        </div>
+        <button type="submit" class="btn btn-success">{{ button_text }}</button>
+        <a href="{% url 'index' %}" class="btn btn-danger">Cancel</a>
+    </form>
+</div>
+{% endblock %}

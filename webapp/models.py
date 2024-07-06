@@ -9,12 +9,12 @@ status_choices = [
 
 
 class GuestBook(models.Model):
-    author = models.CharField(max_length=100, null=False, blank=False)
-    email = models.EmailField(null=False, blank=False)
-    text = models.TextField(null=False, blank=False)
-    date_added = models.DateTimeField(auto_now_add=True)
-    date_updated = models.DateTimeField(auto_now=True)
-    status = models.CharField(max_length=10, choices=status_choices, default='active')
+    author = models.CharField(max_length=100, null=False, blank=False, verbose_name='Автор')
+    email = models.EmailField(null=False, blank=False, verbose_name='Эмейл')
+    text = models.TextField(null=False, blank=False, verbose_name='Текст записи')
+    date_added = models.DateTimeField(auto_now_add=True,verbose_name='Дата создания')
+    date_updated = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
+    status = models.CharField(max_length=10, choices=status_choices, default='active', verbose_name='Статус')
 
     def __str__(self):
         return f"{self.id} {self.author} {self.email} {self.date_added} {self.date_updated}"

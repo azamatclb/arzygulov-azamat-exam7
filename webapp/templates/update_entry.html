@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Update entry</title>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <form action="{% url 'update_entry' entry.pk %}" method="post">
+        {% csrf_token %}
+        {% include 'partial/input_form.html' with entry=entry status_choices=status_choices button_text='Update' %}
+    </form>
+</div>
+{% endblock %}

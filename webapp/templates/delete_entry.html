@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Delete entry</title>
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h6>Are you sure you want to delete entry by: {{ entry.author }}</h6>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-floating mb-3">
+{#                <label for="email"></label><br>#}
+                <h6>Введите email чтобы удалить:</h6>
+                <input type="email" name="email" class="form-control" placeholder="email" required>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn"><a href="{% url 'index' %}" class="btn btn-secondary">Cancel</a></button>
+
+            </div>
+        </form>
+        {% if error %}
+            <p class="text-danger">{{ error }}</p>
+        {% endif %}
+    </div>
+{% endblock %}
+
+
+
